@@ -133,17 +133,6 @@ class _MyHomePageState extends State<MyHomePage> {
     super.dispose();
   }
 
-  List<DataRow> generateRows() {
-    List<DataRow> temp = [];
-    for (var item in notices.keys) {
-      temp.add(DataRow(cells: [
-        DataCell(Text(item.toString())),
-        DataCell(Text(notices[item]))
-      ]));
-    }
-    return temp;
-  }
-
   static void downloadCallback(
       String id, DownloadTaskStatus status, int progress) {
     final SendPort send =
